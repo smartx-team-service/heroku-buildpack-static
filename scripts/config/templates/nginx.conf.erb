@@ -43,6 +43,7 @@ http {
     port_in_redirect off;
     keepalive_timeout 5;
     root <%= root %>;
+    large_client_header_buffers 4 16k;
   <% if error_page %>
     error_page 404 500 /<%= error_page %>;
   <% end %>
